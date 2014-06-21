@@ -1,0 +1,7 @@
+{% if chrome_no_splitdebug %}
+{% if 'splitdebug' in make_conf.features %}
+FEATURES="{{make_conf.features|join(' ')|replace('splitdebug ', '')|replace(' splitdebug', '')|trim}}"
+{% endif %}
+CFLAGS="{{make_conf.cflags|join(' ')|replace('-ggdb', '',)|replace('-g ', '')|replace(' -g', '')|trim}}"
+CXXFLAGS="${CFLAGS}"
+{% endif %}

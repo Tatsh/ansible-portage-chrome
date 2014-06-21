@@ -1,0 +1,27 @@
+- name: 'Install Portage configuration'
+  action: template src=portage/{{item}}/chrome.j2 dest=/etc/portage/{{item}}/chrome
+          owner=root
+          group=root
+          mode=0644
+  register: portage_conf
+  with_items:
+    - env
+    - package.env
+    - package.keywords
+    - package.use
+    - sets
+  tags:
+    - portage
+    - chrome
+    - chromium
+
+- name: 'Install Chrome'
+  portage: name=@chrome
+           quiet=yes
+           update={{portage_update_policy}}
+           newuse={{portage_newuse_policy}}
+  when: portage_conf.changed
+  tags:
+    - portage
+    - chrome
+    - chromium

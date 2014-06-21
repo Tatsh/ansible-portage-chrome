@@ -1,0 +1,8 @@
+chrome_package: chromium
+chrome_include_plugins: true
+chrome_stable_level: '~{{gentoo_arch}}'
+chrome_version_type: beta
+chrome_use_flags:
+  - cups
+  - tcmalloc
+chrome_no_splitdebug: true
