@@ -18,8 +18,6 @@
 - name: 'Install Chrome'
   portage: name=@chrome
            quiet=yes
-           update={{portage_update_policy}}
-           newuse={{portage_newuse_policy}}
   when: portage_conf.changed
   tags:
     - portage
