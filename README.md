@@ -1,8 +1,6 @@
 # Required variables
 
 * `gentoo_arch` A system Gentoo supports like `amd64`
-* `portage_newuse_policy` If `true`, `--newuse` flag will be used with `emerge`.
-* `portage_update_policy` If `true`, the package will be updated if a new version is available.
 
 # Variables
 
