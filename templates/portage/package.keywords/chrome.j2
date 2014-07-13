@@ -3,4 +3,6 @@ www-client/{{chrome_package}} {{chrome_stable_level}}
 {% if chrome_include_plugins %}
 www-plugins/chrome-binary-plugins:{{chrome_version_type}} {{chrome_stable_level}}
 {% endif %}
+{# Required for cups USE flag #}
+dev-libs/libgcrypt {{chrome_stable_level}}
 {% endif %}
