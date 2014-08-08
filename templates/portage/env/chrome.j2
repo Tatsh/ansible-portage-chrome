@@ -1,3 +1,5 @@
+# {{ ansible_managed }}
+
 {% if chrome_no_splitdebug %}
 {% if 'splitdebug' in make_conf.features %}
 FEATURES="{{make_conf.features|join(' ')|replace('splitdebug ', '')|replace(' splitdebug', '')|trim}}"
