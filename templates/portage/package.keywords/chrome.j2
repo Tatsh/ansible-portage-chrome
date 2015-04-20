@@ -2,17 +2,24 @@
 
 {% if chrome_stable_level %}
 www-client/{{chrome_package}} {{chrome_stable_level}}
+
 {% if chrome_include_plugins %}
 www-plugins/chrome-binary-plugins:{{chrome_version_type}} {{chrome_stable_level}}
 {% endif %}
+
 {# Required for cups USE flag #}
 dev-libs/libgcrypt {{chrome_stable_level}}
-{% endif %}
+
 {# 20141205 #}
 dev-libs/nspr {{chrome_stable_level}}
+
 {# 20150221 #}
 sys-apps/pciutils {{chrome_stable_level}}
+
 {# 20150419 #}
 media-libs/libvpx {{chrome_stable_level}}
+{% endif %}{# chrome_stable_level #}
 
-www-plugins/google-talkplugin {{chrome_stable_level}}
+{% if chrome_include_plugins %}
+www-plugins/google-talkplugin ~{{gentoo_arch}}
+{% endif %}
