@@ -4,7 +4,9 @@
 www-client/{{chrome_package}} {{chrome_stable_level}}
 
 {% if chrome_include_plugins %}
-www-plugins/chrome-binary-plugins:{{chrome_version_type}} {{chrome_stable_level}}
+{# www-plugins/chrome-binary-plugins:{{chrome_version_type}} {{chrome_stable_level}}#}
+{# 20150531 Beta chrome (44) is currently hard-maskedm, but latest 43 is keyworded #}
+www-plugins/chrome-binary-plugins:stable {{chrome_stable_level}}
 {% endif %}
 
 {# Required for cups USE flag #}
