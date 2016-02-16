@@ -5,4 +5,5 @@ chrome_version_type: beta
 chrome_use_flags:
   - cups
   - tcmalloc
+  - proprietary-codecs
 chrome_no_splitdebug: true
