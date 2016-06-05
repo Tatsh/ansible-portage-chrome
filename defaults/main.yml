@@ -1,7 +1,7 @@
 chrome_package: chromium
 chrome_include_plugins: true
 chrome_stable_level: '~{{gentoo_arch}}'
-chrome_version_type: beta
+chrome_version_type: stable  # NOTE mismatching again 2016-04-25
 chrome_use_flags:
   - cups
   - tcmalloc
